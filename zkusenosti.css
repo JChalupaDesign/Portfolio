@@ -112,6 +112,6 @@
 
 /* mobilní drobnosti */
 @media (max-width: 480px) {
-  .xp { padding: 5rem 6% 4rem; }
   .xp__meta { width: 100%; }
 }
+
