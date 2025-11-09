@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kontakty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Služby</title>
+</head>
+<body>
+    <header>
+        <a href="domov.html" class="logo">Josef Chalupa</a>
+
+          <div class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav">
+            <a href="domov.html">Domov</a>
+            <a href="sluzby.html">Služby</a>
+            <a href="dovednosti.html">Dovednosti</a>
+            <a href="vzdelani.html">Vzdělání</a>
+            <a href="zkusenosti.html">Zkušenosti</a>
+            <a href="kontakty.html" class="active">Kontakty</a>
+        </nav>
+    </header>
+    <section class="contact" id="contact">
+  <h2 class="heading">Kontaktujte <span>mě</span></h2>
+  <p class="subtext">Máte projekt nebo otázku? Napište mi — odpovím co nejdřív.</p>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="info-box">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:chalupaaaaaa@gmail.com">chalupaaaaaa@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <h3>Telefon</h3>
+          <p><a href="tel:+420604424832">+420 604 424 832</a></p>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fa-brands fa-instagram"></i>
+        <div>
+          <h3>Instagram</h3>
+          <p><a href="https://www.instagram.com/pepachalupa" target="_blank" rel="noopener noreferrer">@pepachalupa</a></p>
+        </div>
+      </div>
+    </div>
+
+
+    <form action="https://formspree.io/f/mvgdpdnr" method="POST" class="contact-form">
+  <label>
+    <span>Váš e-mail:</span>
+    <input type="email" name="email" placeholder="např. pepachalupa@email.cz" required>
+  </label>
+  <label>
+    <span>Zpráva:</span>
+    <textarea name="message" placeholder="Sem napište svou zprávu..." rows="5" required></textarea>
+  </label>
+  <button type="submit" class="btn">Odeslat</button>
+
+    <p id="form-status" style="display:none; margin-top:1rem; color:#6633FF; font-weight:600;">
+    Zpráva byla úspěšně odeslána!
+  </p>
+</form>
+
+  </div>
+</section>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+
+    // Změna ikony
+    if (menuToggle.classList.contains('open')) {
+      menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    } else {
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
+  });
+</script>
+
+</body>
+
+<div class="bg-bars" aria-hidden="true"></div>
+
+<script>
+  const form = document.querySelector('.contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // zastaví klasické odeslání
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        status.style.display = 'block';
+        status.style.color = '#6633FF';
+        status.textContent = 'Zpráva byla úspěšně odeslána!';
+        form.reset();
+
+        // po 5 sekundách se hláška automaticky schová
+        setTimeout(() => {
+          status.style.display = 'none';
+        }, 5000);
+      } else {
+        throw new Error('Chyba serveru');
+      }
+    } catch (error) {
+      status.style.display = 'block';
+      status.style.color = 'red';
+      status.textContent = 'Nastala chyba při odesílání. Zkuste to znovu.';
+    }
+  });
+</script>
+
+</html>

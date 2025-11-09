@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sluzby.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Služby</title>
+</head>
+<body>
+    <header>
+        <a href="domov.html" class="logo">Josef Chalupa</a>
+
+                  <div class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav">
+            <a href="domov.html">Domov</a>
+            <a href="sluzby.html" class="active">Služby</a>
+            <a href="dovednosti.html">Dovednosti</a>
+            <a href="vzdelani.html">Vzdělání</a>
+            <a href="zkusenosti.html">Zkušenosti</a>
+            <a href="kontakty.html">Kontakty</a>
+        </nav>
+    </header>
+
+    <!-- ======== SEKCE SLUŽBY ======== -->
+<section class="services" id="services">
+  <h2 class="section-title">Služby</h2>
+
+  <div class="services-container">
+    <div class="service-card">
+      <i class="fa-solid fa-palette"></i>
+      <h3>Grafický design</h3>
+      <p>Tvorba moderní grafiky, bannerů, log a reklamních vizuálů pro web i tisk.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-code"></i>
+      <h3>Tvorba webových stránek</h3>
+      <p>Programování responzivních webů v HTML, CSS a JavaScriptu, ladění detailů pro maximální přehlednost.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-store"></i>
+      <h3>Správa e-shopů</h3>
+      <p>Kompletní správa e-shopů — přidávání produktů, úpravy textů, bannery a SEO optimalizace.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-camera"></i>
+      <h3>Fotografie</h3>
+      <p>Produktová a propagační fotografie s důrazem na estetiku a čistý vizuální styl.</p>
+    </div>
+  </div>
+</section>
+
+
+</body>
+<div class="bg-bars" aria-hidden="true"></div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+
+    // Změna ikony
+    if (menuToggle.classList.contains('open')) {
+      menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    } else {
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
+  });
+</script>
+</html>

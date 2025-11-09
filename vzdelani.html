@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vzdelani.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Služby</title>
+</head>
+<body>
+    <header>
+        <a href="domov.html" class="logo">Josef Chalupa</a>
+
+                  <div class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="nav">
+            <a href="domov.html">Domov</a>
+            <a href="sluzby.html">Služby</a>
+            <a href="dovednosti.html">Dovednosti</a>
+            <a href="vzdelani.html" class="active">Vzdělání</a>
+            <a href="zkusenosti.html">Zkušenosti</a>
+            <a href="kontakty.html">Kontakty</a>
+        </nav>
+    </header>
+
+    <section class="section education" id="vzdelani" aria-labelledby="edu-heading">
+  <h2 class="section-title" id="edu-heading">Vzdělání</h2>
+
+
+  <article class="edu-card">
+      <div class="edu-card__icon" aria-hidden="true">🎓</div>
+      <div>
+        <h3 class="edu-card__title">Střední průmyslová škola Trutnov</h3>
+        <p class="edu-card__meta">Obor: Informační technologie a management · 2019–2023</p>
+      </div>
+
+    <div class="edu-card__body">
+      <p class="edu-card__desc">
+        Zaměření na grafický design, web a základy IT. Práce s Adobe (PS/AI),
+        základy HTML/CSS/JS a správa e-shopů.
+      </p>
+
+      <ul class="edu-card__list">
+        <li>Školní projekty: loga, jednoduché weby, bannery</li>
+        <li>Technologie: HTML, CSS, základ JS, Photoshop, Illustrator</li>
+        <li>Praktická praxe: správa produktů a obsahu v e-shopu</li>
+      </ul>
+
+      <div class="edu-card__badges">
+        <span class="badge">#grafika</span>
+        <span class="badge">#web</span>
+        <span class="badge">#IT</span>
+      </div>
+    </div>
+
+    <footer class="edu-card__foot">
+      <a class="btn btn--ghost" href="Josef_Chalupa_CV.pdf" target="_blank" rel="noopener noreferrer">Stáhnout CV</a>
+    </footer>
+  </article>
+</section>
+
+
+</body>
+<div class="bg-bars" aria-hidden="true"></div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    menuToggle.classList.toggle('open');
+
+    // Změna ikony
+    if (menuToggle.classList.contains('open')) {
+      menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    } else {
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
+  });
+</script>
+</html>

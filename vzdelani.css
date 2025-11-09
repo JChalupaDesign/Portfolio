@@ -1,0 +1,120 @@
+/* === Vzdělání === */
+.section-title{
+  font-size: clamp(2.2rem, 1.8rem + 1.2vw, 3rem);
+  margin-bottom: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.education{
+  padding-top: 6rem; /* ať nekoliduje s fixed headerem */
+}
+
+.edu-card{
+  --c-ink:#ffffff;
+  --c-accent:#6633FF;
+  --c-bg:#0a0a0a;
+  --c-edge:#1a1a1a;
+
+  background: radial-gradient(120% 120% at 0% 0%, rgba(102,51,255,0.12), transparent 60%),
+              linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+  border: 1px solid var(--c-edge);
+  border-radius: 16px;
+  padding: 2rem;
+  color: var(--c-ink);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  max-width: 900px;
+  margin: 0 auto;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+
+.edu-card__head{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.2rem;
+  align-items: center;
+  border-bottom: 1px solid var(--c-edge);
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.edu-card__icon{
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(102,51,255,0.25), rgba(255,255,255,0.06));
+  border: 1px solid rgba(102,51,255,0.35);
+  font-size: 2.2rem;
+}
+
+.edu-card__title{
+  font-size: clamp(1.8rem, 1.4rem + .6vw, 2.4rem);
+  line-height: 1.2;
+}
+
+.edu-card__meta{
+  color: #c7c7c7;
+  font-size: 1.5rem;
+  margin-top: .2rem;
+}
+
+.edu-card__body{
+  display: grid;
+  gap: 1.2rem;
+}
+
+.edu-card__desc{
+  font-size: 1.6rem;
+  color: #eaeaea;
+}
+
+.edu-card__list{
+  margin: .2rem 0 0;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: .4rem;
+}
+.edu-card__list li{
+  font-size: 1.55rem;
+  color: #d9d9d9;
+  list-style: disc;
+}
+
+.edu-card__badges{
+  display: flex; flex-wrap: wrap; gap: .6rem;
+  margin-top: .4rem;
+}
+.badge{
+  font-size: 1.2rem;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(102,51,255,0.45);
+  background: rgba(102,51,255,0.14);
+  color: #fff;
+}
+
+.edu-card__foot{
+  border-top: 1px solid var(--c-edge);
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  display: flex; justify-content: flex-end;
+}
+
+/* sekundární varianta tlačítka, ladí s tvou .btn */
+.btn--ghost{
+  background: transparent;
+  border-color: #6633FF;
+  color: #6633FF;
+}
+.btn--ghost:hover{
+  background: #6633FF;
+  color: #000;
+}
+
+/* Responsivita */
+@media (max-width: 600px){
+  .edu-card{ padding: 1.6rem; }
+  .edu-card__icon{ width: 42px; height: 42px; font-size: 2rem; }
+  .edu-card__list li{ font-size: 1.45rem; }
+}
