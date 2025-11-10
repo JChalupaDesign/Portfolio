@@ -71,63 +71,6 @@
   });
 </script>
 
-<script>
-  (function () {
-    const header = document.querySelector('header');
-    if (!header) return;
 
-    // Odstraníme překryv: přidáme body padding-top = výška headeru
-    function applyBodyOffset() {
-      const h = header.getBoundingClientRect().height;
-      document.body.style.paddingTop = h + 'px';
-    }
-    applyBodyOffset();
-    window.addEventListener('resize', applyBodyOffset);
-
-    let lastY = window.scrollY;
-    let ticking = false;
-
-    function onScroll() {
-      const y = window.scrollY;
-
-      // Tmavé pozadí + blur jakmile nejsme na úplném topu
-      if (y > 10) {
-        header.classList.add('header--scrolled', 'header--compact');
-      } else {
-        header.classList.remove('header--scrolled', 'header--compact');
-      }
-
-      // Pokud je otevřené mobilní menu, neschovávej header
-      const nav = document.getElementById('nav');
-      const menuOpen =
-        (nav && (nav.classList.contains('active') || nav.getAttribute('aria-expanded') === 'true')) ||
-        document.documentElement.classList.contains('menu-open');
-
-      if (!menuOpen) {
-        // směr scrollu: dolů -> schovat, nahoru -> ukázat
-        if (y > lastY && y > 60) {
-          header.classList.add('header--hidden');
-        } else {
-          header.classList.remove('header--hidden');
-        }
-      }
-
-      lastY = y;
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(onScroll);
-        ticking = true;
-      }
-    }, { passive: true });
-
-    // Po načtení ihned aplikuj stav (kvůli refreshi uprostřed stránky)
-    onScroll();
-  })();
-
-
-</script>
 
 </html>

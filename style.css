@@ -325,38 +325,10 @@ span{
 
 
 
-/* Header efekty při scrollu */
-header {
-  transition:
-    transform 320ms ease,
-    background-color 200ms ease,
-    backdrop-filter 200ms ease,
-    box-shadow 200ms ease;
-    
+section{
+    margin-top: 50px;
 }
-
-/* Tmavé průsvitné pozadí + blur, když nejsme úplně nahoře */
-.header--scrolled {
-  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
-}
-
-/* Schování headeru při scrollu dolů */
-.header--hidden {
-  transform: translateY(-200%);
-}
-
-/* (Volitelné) menší výška headeru po scrollu kvůli kompaktnosti */
-.header--compact {
-  padding: 0.6rem 9%;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  header {
-    transition: none;
-  }
-}
-
 
 header{
-    padding-bottom: 20px;
+    position: relative;
 }
