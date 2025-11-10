@@ -287,6 +287,8 @@ span{
   .menu-toggle {
     display: block;
     z-index: 200;
+    position: fixed;
+    right: 20px;
   }
 
   nav {
