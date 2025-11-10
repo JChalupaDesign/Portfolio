@@ -198,10 +198,10 @@ span{
 
 @keyframes words{
     0%, 20%{
-        content:"Tvůrce webových stránek";
+        content:"Web designer";
     }
     21%, 40%{
-        content:"Spráce E-Shopů";
+        content:"Správce E-Shopů";
     }
     41%, 60%{
         content: "IT specialista";
@@ -320,4 +320,5 @@ span{
     color: #6633FF;
     border-bottom: 2px solid #6633FF;
   }
+
 }
