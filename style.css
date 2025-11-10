@@ -32,21 +32,17 @@ header{
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     z-index: 100;
 }
 
 .logo{
-    font-size: 3rem;
-    color: white;
-    font-weight: 800;
-    cursor: pointer;
     transition: 0.5s ease;
+    width: 10%;
+    padding-top: 0px;
 }
 
-.logo:hover{
-    transform: scale(1.1);
-}
+
 
 nav a{
     font-size: 1.8rem;
@@ -79,6 +75,8 @@ section{
     justify-content: center;
     align-items: center;
     gap: 8rem;
+    margin-top: -200px;
+    padding-top: -200px;
 }
 
 .home .home-content h1{
@@ -323,16 +321,22 @@ span{
     border-bottom: 2px solid #6633FF;
   }
 
+  .logo{
+    width: 30%;
+  }
+
+  .home{
+    margin-top: -100px;
+  }
+
 }
 
 
 
 section{
-    margin-top: 8px;
+    margin-top: 20px;
 }
 
 header{
     position: relative;
-
 }
-

@@ -94,7 +94,7 @@
   }
 
   .contact{
-    margin-top:10%;
+    margin-top:-30px;
   }
 
 
@@ -131,6 +131,10 @@
     padding: 1.2rem;
     font-size: 1.6rem;
   }
+  .contact-form {
+    margin-top: -100px;
+}
+
 }
 
 .contact-form {

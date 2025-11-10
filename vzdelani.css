@@ -1,9 +1,10 @@
 /* === Vzdělání === */
 .section-title{
-  font-size: clamp(2.2rem, 1.8rem + 1.2vw, 3rem);
+    font-size: 4rem;
   margin-bottom: 3rem;
   font-weight: 800;
   letter-spacing: 0.3px;
+  text-align: center;
 }
 
 .education{

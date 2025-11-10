@@ -12,17 +12,18 @@
 }
 
 .section-title{
-      font-size: clamp(2.2rem, 1.8rem + 1.2vw, 3rem);
+    font-size: 4rem;
   margin-bottom: 3rem;
   font-weight: 800;
   letter-spacing: 0.3px;
+  text-align: center;
 }
 
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.5rem;
-  margin-top:15rem;
+  margin-top:0rem;
 }
 
 .service-card {
