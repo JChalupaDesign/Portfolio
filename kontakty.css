@@ -198,7 +198,7 @@
   margin-top: 1.5rem;
   color: #6633FF;
   font-weight: 700;
-  font-size: 2rem; /* větší text */
+  font-size: 2rem;
   text-align: center;
   transition: opacity 0.3s ease-in-out;
 }

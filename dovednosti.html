@@ -10,11 +10,13 @@
     <title>JCH Dovednosti</title>
 </head>
 <body>
+
     <header>
+
         <img src="logo.png" class="logo">
 
-                  <div class="menu-toggle" id="menu-toggle">
-    <i class="fa-solid fa-bars"></i>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
         </div>
 
         <nav id="nav">
@@ -25,10 +27,11 @@
             <a href="zkusenosti.html">Zkušenosti</a>
             <a href="kontakty.html">Kontakty</a>
         </nav>
+
     </header>
 
-    <!-- ======== SEKCE DOVEDNOSTI ======== -->
 <section class="skills" id="skills">
+
   <h2 class="section-title">Dovednosti</h2>
 
   <div class="skills-container">
@@ -53,10 +56,15 @@
       </ul>
     </div>
   </div>
+
 </section>
 
+</body>
 
-        <script>
+<div class="bg-bars" aria-hidden="true"></div>
+
+<script>
+
   const menuToggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav');
 
@@ -64,16 +72,13 @@
     nav.classList.toggle('active');
     menuToggle.classList.toggle('open');
 
-    // Změna ikony
     if (menuToggle.classList.contains('open')) {
       menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     } else {
       menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
     }
   });
-</script>
-</body>
-<div class="bg-bars" aria-hidden="true"></div>
 
+</script>
 
 </html>
